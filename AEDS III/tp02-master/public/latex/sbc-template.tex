@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{float}
+
+% \usepackage[latin1]{inputenc}  
+
+     
+\sloppy
+
+\title{Paradigmas de Projeto de Algoritmos}
+
+\author{Ana Flavia Freiria Rodrigues\inst{1}, Flávia Marcella Gonçalves Moreira\inst{1}, \\ Larissa Rodrigues de Avila\inst{1}, Lucas Carrijo Ferrari\inst{1}, Raissa Nunes Peret\inst{1}}
+
+
+\address{Departamento de Ciências da Computação – Universidade Federal de Alfenas \\
+Avenida Jovino Fernandes de Sales 2600 – CEP 37133840 - Alfenas – MG - Brasil
+\email{ana.freiria@sou.unifal-mg.edu.br, flavia.goncalves@sou.unifal-mg.edu.br}
+\email{larissa.avila@sou.unifal-mg.edu.br, lucas.ferrari@sou.unifal-mg.edu.br}
+\email{raissa.peret@sou.unifal-mg.edu.br}}
+
+\begin{document} 
+
+\maketitle
+     
+\begin{resumo} 
+    Este trabalho implementa e compara três abordagens para o Problema do Caixeiro Viajante (PCV): \textbf{Força Bruta}, que avalia todas as rotas possíveis garantindo a solução ótima; \textbf{Algoritmo Guloso}, que constrói soluções subótimas com complexidade $O(n^2)$; e \textbf{Programação Dinâmica} (Held-Karp), que equilibra precisão e eficiência ($O(n^2 \cdot 2^n)$). Os resultados, obtidos a partir de instâncias da TSPLIB, mostram que a Programação Dinâmica é ideal para $n \leq 20$, enquanto o método Guloso é viável para instâncias maiores, apesar de desvios médios de 2.2\% do ótimo. A análise evidencia o \textit{trade-off} clássico entre tempo de execução e qualidade da solução.
+\end{resumo}
+
+\input{cap/1_introducao}
+\input{cap/2_algoritmos}
+\input{cap/3_resultados}
+
+\bibliographystyle{sbc}
+\bibliography{sbc-template}
+
+\end{document}
